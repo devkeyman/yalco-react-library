@@ -1,0 +1,9 @@
+.loading {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.loading > div {
+  margin-top: 1em;
+  font-size: 3.6em;
+}

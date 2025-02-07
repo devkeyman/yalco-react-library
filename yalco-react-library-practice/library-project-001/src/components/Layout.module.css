@@ -1,0 +1,12 @@
+.container {
+  max-width: 640px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 24px;
+  height: calc(100vh - 56px);
+  overflow-y: scroll;
+  background-color: #f9f9f9;
+}
