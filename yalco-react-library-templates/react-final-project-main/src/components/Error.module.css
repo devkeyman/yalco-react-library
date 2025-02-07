@@ -1,0 +1,9 @@
+.error {
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.error > div {
+  margin-top: 1em;
+  font-size: 3.6em;
+}
