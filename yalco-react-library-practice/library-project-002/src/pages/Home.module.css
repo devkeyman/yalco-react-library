@@ -1,0 +1,26 @@
+.topbar {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.topbar h1 {
+  flex-grow: 1;
+}
+
+.topbar input[type=text], select {
+  outline: 0;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.topbar input[type=text] {
+  width: 200px;
+}
+
+.topbar select {
+  font-size: .9em;
+  margin-left: 0.4em;
+  padding: 8px;
+}
