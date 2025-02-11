@@ -1,5 +1,10 @@
-const Loading = () => (
-  <></>
-)
+import styles from "./Loading.module.css";
 
-export default Loading
+const Loading = () => (
+  <div className={styles.loading}>
+    <div>⏳</div>
+    Loading...
+  </div>
+);
+
+export default Loading;

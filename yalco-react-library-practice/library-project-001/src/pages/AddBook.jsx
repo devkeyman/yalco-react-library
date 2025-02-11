@@ -1,7 +1,36 @@
-const AddBook = () => {
-  return (
-    <></>
-  )
-}
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { useBookContext } from "../context/BookContext";
+import BookForm from "../components/BookForm";
 
-export default AddBook
+const AddBook = () => {
+  const navigate = useNavigate();
+  const { dispatch } = useBookContext();
+
+  const handleSubmit = async (newBook) => {
+    try {
+      const response = await fetch("http://localhost:3000/books", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(newBook),
+      });
+
+      if (!response.ok) throw new Error("Failed to add book");
+
+      const data = await response.json();
+      dispatch({ type: "ADD_BOOK", payload: data });
+      navigate("/");
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  return (
+    <div>
+      <h1>새 도서 추가</h1>
+      <BookForm onSubmit={handleSubmit} />
+    </div>
+  );
+};
+
+export default AddBook;

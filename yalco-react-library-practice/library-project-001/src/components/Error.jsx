@@ -1,5 +1,10 @@
-const Error = () => (
-  <></>
-)
+import styles from "./Error.module.css";
 
-export default Error
+const Error = () => (
+  <div className={styles.error}>
+    <div>⚠️</div>
+    Error!
+  </div>
+);
+
+export default Error;
